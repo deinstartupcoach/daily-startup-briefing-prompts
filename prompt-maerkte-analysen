@@ -1,1 +1,136 @@
+# Kategorie-Prompt: Märkte & Analysen (market-insights)
+
+**Lies zuerst den Base-Prompt, dann wende diese kategorie-spezifischen Regeln an.**
+
+## Section-Wert
+```json
+"section": "market-insights"
+```
+
+## Definition
+
+Diese Kategorie erfasst alle analytischen, datengetriebenen News über das deutsche Startup-Ökosystem: Marktberichte, Studien, Statistiken, Trend-Analysen und makroökonomische Entwicklungen mit Startup-Bezug.
+
+## Was gehört in diese Kategorie?
+
+✅ **Marktberichte & VC-Reports**
+- Quarterly/Annual VC-Reports (z.B. "Q3 2025 VC-Funding Deutschland")
+- Ecosystem-Reports (z.B. "State of Berlin Startup Scene")
+- Branchenberichte mit Startup-Fokus
+
+✅ **Studien & Analysen**
+- KfW-Studien, PwC-Reports, EY-Analysen
+- Universitäts-Studien zum Startup-Ökosystem
+- Befragungen/Umfragen unter Gründern oder VCs
+
+✅ **Funding-Statistiken & Trends**
+- Aggregierte Funding-Daten (nicht Einzel-Deals!)
+- Vergleiche über Zeit/Regionen/Branchen
+- "VC-Investments steigen um X%"
+
+✅ **Makro-Entwicklungen mit Startup-Impact**
+- Wirtschaftliche Trends, die Startups betreffen
+- Arbeitsmarkt-Daten für Tech-Talente
+- Bewertungs-Trends, Exit-Multiples
+
+✅ **Ecosystem-Analysen**
+- Rankings (z.B. "Top 10 Startup-Cities")
+- Benchmark-Studien
+- Strukturelle Ökosystem-Entwicklungen
+
+## Beispiele - Was REIN gehört
+
+✅ "Deutsche VC-Investments steigen um 20% in Q4"  
+✅ "KfW-Studie: 40% mehr SaaS-Gründungen in 2025"  
+✅ "Berliner Startup-Ökosystem knackt 10 Mrd. EUR Valuation"  
+✅ "Dealroom-Report: DeepTech-Funding verdoppelt sich"  
+✅ "Studie: 60% der deutschen Startups planen internationale Expansion"  
+✅ "Deutscher Unicorn-Count erreicht 30 Unternehmen"  
+✅ "Tech-Gehälter in München steigen um 15%"
+
+## Beispiele - Was NICHT rein gehört
+
+❌ "Startup X erhält 5M EUR Series A" → funding-vc (Einzel-Deal, keine Statistik)  
+❌ "BMWK startet neues Förderprogramm" → policy-institutions  
+❌ "AI-Startup launcht neue Plattform" → launches-profiles  
+❌ "VC-Fonds Y schließt 100M Fund" → funding-vc (konkreter Fund, keine Marktanalyse)
+
+## Entscheidungsbaum für Grenzfälle
+
+**Frage 1:** Ist es eine Studie/Report/Analyse/Statistik?
+- Ja → Weiter zu Frage 2
+- Nein → Andere Kategorie
+
+**Frage 2:** Bezieht es sich auf aggregierte Daten oder Trends?
+- Ja, aggregierte Daten über mehrere Startups/VCs → **market-insights**
+- Nein, es geht um EIN spezifisches Startup → Je nach Kontext andere Kategorie
+
+**Beispiel-Grenzfälle:**
+- "Report zeigt: HealthTech-Sektor wächst um 50%" → market-insights (Sektor-Trend)
+- "HealthTech-Startup X wächst um 50%" → Kann launches-profiles sein (bei Launch) oder gar nicht (nur Wachstums-News)
+- "Studie von Bitkom zu KI-Regulierung" → market-insights (Studie) ODER policy-institutions (wenn Policy-Forderung im Fokus)
+  - **Entscheidung:** Ist der Kern eine Analyse (→ market-insights) oder eine politische Forderung (→ policy-institutions)?
+
+## Typische Topics für diese Kategorie
+
+Primär:
+- Market Insights (fast immer)
+
+Häufig kombiniert mit:
+- VC News (bei VC-Reports)
+- Funding Rounds (bei Funding-Statistiken)
+- Spezifische Branchen-Topics je nach Fokus:
+  - AI, Data & Automation
+  - DeepTech & Advanced Computing
+  - FinTech, GovTech & Regulation
+  - Health & Life Sciences
+  - Climate, Energy & Sustainability
+  - etc.
+
+## Ziel-Item-Anzahl
+
+**Minimum:** 3 Items  
+**Ziel:** 3-5 Items  
+**Maximum:** Unbegrenzt (falls viele relevante Reports/Studien vorhanden)
+
+## Spezielle Hinweise
+
+### Bei Studien/Reports:
+- Herausgeber/Institution im summary erwähnen
+- Zentrale Zahl/Erkenntnis nennen
+- Wenn vorhanden: Vergleichszeitraum angeben
+
+### Bei Statistiken:
+- Konkreten Prozentsatz/Betrag nennen
+- Bezugszeitraum klar machen (Q3, 2025, YoY, etc.)
+- Bei Vergleichen: Womit wird verglichen?
+
+### Bei Rankings:
+- Top-Position(en) erwähnen
+- Ranking-Kriterium nennen
+
+### Quellen-Qualität:
+- Bevorzuge etablierte Research-Häuser (KfW, PwC, EY, Dealroom, Pitchbook)
+- Bei kleineren Studien: Methodik/Sample-Size im Hinterkopf behalten
+
+## Abgrenzung zu anderen Kategorien
+
+| Wenn es ist... | Dann gehört es zu... |
+|----------------|----------------------|
+| Aggregierte Funding-Statistik | market-insights |
+| Einzelner Funding-Deal | funding-vc |
+| Studie eines Verbands mit Policy-Forderung | Schwieriger Fall: Eher policy-institutions (wenn Forderung im Fokus) |
+| Report über einen Sektor | market-insights |
+| Launch eines neuen Marktes durch ein Startup | launches-profiles |
+
+## Validierung vor Output
+
+Prüfe für jedes Item:
+- [ ] Hat "section": "market-insights"
+- [ ] Ist eine Studie/Report/Analyse/Statistik
+- [ ] Bezieht sich auf aggregierte Daten ODER Trends
+- [ ] Ist KEIN Einzel-Deal/Einzel-Launch
+- [ ] Hat mindestens 1 Topic aus der erlaubten Liste
+- [ ] "Market Insights" ist als Topic enthalten (empfohlen)
+- [ ] Konkrete Zahlen/Erkenntnisse sind im summary
 
