@@ -1,1 +1,257 @@
+# Kategorie-Prompt: Finanzierungen & VCs (funding-vc)
+
+**Lies zuerst den Base-Prompt, dann wende diese kategorie-spezifischen Regeln an.**
+
+## Section-Wert
+```json
+"section": "funding-vc"
+```
+
+## Definition
+
+Diese Kategorie erfasst Finanzierungsrunden von Startups (strikt Early Stage bis max. 15 Mio. EUR) sowie VC-bezogene News wie neue Funds, VC-Strategien und LP-Themen.
+
+**KERNPRINZIP:** Fokus auf EARLY STAGE Funding und VC-Ecosystem-News. Keine Late-Stage-Mega-Runden!
+
+## Was gehört in diese Kategorie?
+
+### A) Startup-Finanzierungen (mit strikten Limits!)
+
+✅ **Early-Stage-Runden bis MAX. 15 Mio. EUR:**
+- Pre-Seed (typisch: 100k - 1M EUR)
+- Seed (typisch: 500k - 5M EUR)
+- Series A (typisch: 2M - 15M EUR)
+- LIMIT: Maximal 15 Mio. EUR!
+
+❌ **VERBOTEN - Zu große Runden:**
+- Series B+ (meist > 15M EUR)
+- Growth Rounds (meist 20M - 100M+ EUR)
+- Late Stage (meist 50M+ EUR)
+- Mega-Runden (100M+, 1B+ etc.)
+
+### B) VC-Fund-News (alle Größen erlaubt!)
+
+✅ **Neue VC-Funds:**
+- Micro-VCs (5M - 50M EUR)
+- Mittelgroße Funds (50M - 200M EUR)
+- Große Funds (200M+ EUR)
+- ALLE Fund-Größen sind erlaubt (nur bei Funds, nicht bei Startup-Runden!)
+
+✅ **VC-Strategie & Operations:**
+- Neue Investment-Thesen
+- Geografische Expansion von VCs
+- VC-Partnerships
+- LP-News (Limited Partners)
+
+✅ **VC-Management-News:**
+- Neue Partner/GPs bei VCs
+- VC-Rebrandings
+- VC-Mergers
+
+## Beispiele - Was REIN gehört
+
+### Startup-Finanzierungen (≤15M EUR):
+✅ "Berliner HealthTech Medix erhält 8 Mio. EUR Series A"  
+✅ "Hamburger AI-Startup DataLoop sichert 2 Mio. EUR Seed"  
+✅ "Münchner Fintech holt 5 Mio. EUR Pre-Seed von Capnamic"  
+✅ "SaaS-Startup X schließt 12 Mio. EUR Series A ab"  
+✅ "CleanTech-Venture Y sammelt 800k EUR Pre-Seed ein"
+
+### VC-Fund-News:
+✅ "Neuer Micro-VC 'Rhine Ventures' startet mit 15 Mio. EUR Fund"  
+✅ "Earlybird schließt 350 Mio. EUR Fund VII"  
+✅ "Speedinvest expandiert nach Hamburg mit neuem Office"  
+✅ "HV Capital announced neuen 500M EUR DeepTech-Fund"  
+✅ "Cherry Ventures holt strategischen Corporate-LP an Bord"
+
+## Beispiele - Was NICHT rein gehört
+
+### Zu große Startup-Runden:
+❌ "Tech-Unicorn X erhält 100 Mio. USD Series C" (zu groß!)  
+❌ "Scale-up Y holt 50M Growth Round" (Late Stage!)  
+❌ "Trade Republic raises 250M Series D" (zu groß!)  
+❌ "Gorillas sammelt 1 Milliarde USD ein" (Mega-Round!)
+
+### Andere Kategorien:
+❌ "Startup Z launcht Produkt mit 20M Funding" → launches-profiles (Launch im Fokus, auch wenn Funding >15M)  
+❌ "BMWK startet 100M Förderprogramm" → policy-institutions  
+❌ "Studie: VC-Funding steigt um 30%" → market-insights
+
+### Sonstige:
+❌ "Business Angel X investiert privat" (meist zu klein/irrelevant, außer sehr prominent)  
+❌ "Crowdfunding-Kampagne von Startup Y" (kein VC-Funding)
+
+## Entscheidungsbaum für Grenzfälle
+
+**Frage 1:** Ist es eine Startup-Finanzierung?
+- Ja → Weiter zu Frage 2
+- Nein, ist es VC-Fund/Strategie-News? → Weiter zu Frage 5
+- Nein → Andere Kategorie
+
+**Frage 2:** Wie hoch ist die Runde?
+- ≤ 15 Mio. EUR → Weiter zu Frage 3
+- > 15 Mio. EUR → Weiter zu Frage 4
+
+**Frage 3:** Gibt es einen gleichzeitigen Launch?
+- Ja, Launch steht im Fokus → **launches-profiles**
+- Nein, nur Funding-News → **funding-vc**
+
+**Frage 4:** (Runde > 15M EUR) Gibt es einen Launch?
+- Ja, Launch ist relevant → **launches-profiles** (Ausnahme: Launch erlaubt trotz >15M)
+- Nein → **NICHT AUFNEHMEN** (zu groß für Early Stage)
+
+**Frage 5:** Ist es VC-Fund/Strategie-News?
+- Ja → **funding-vc** (alle Fund-Größen erlaubt!)
+- Nein → Andere Kategorie
+
+### Beispiel-Grenzfälle im Detail:
+
+| Szenario | Runden-Größe | Launch? | Kategorie | Begründung |
+|----------|--------------|---------|-----------|------------|
+| Seed-Runde | 3M EUR | Nein | funding-vc | ✅ ≤15M, kein Launch |
+| Series A | 12M EUR | Nein | funding-vc | ✅ ≤15M, kein Launch |
+| Series A | 18M EUR | Nein | SKIP | ❌ >15M, kein Launch |
+| Series B | 25M EUR | Ja | launches-profiles | ✅ Launch erlaubt >15M |
+| Series B | 25M EUR | Nein | SKIP | ❌ >15M, kein Launch |
+| Neuer VC-Fund | 500M EUR | N/A | funding-vc | ✅ Fund-News (alle Größen) |
+
+## Funding-Größen: Orientierung
+
+**Typische Ranges (Deutschland):**
+- Pre-Seed: 100k - 1M EUR
+- Seed: 500k - 5M EUR
+- Series A: 2M - 15M EUR
+- Series B: 10M - 40M EUR ← Oft schon >15M!
+- Series C+: 30M+ EUR ← Fast immer >15M!
+- Growth: 50M+ EUR
+- Late Stage: 100M+ EUR
+
+**Wenn unklar:** Bei "Series A" mit 20M → SKIP (zu groß)
+
+## Typische Topics für diese Kategorie
+
+### Bei Startup-Finanzierungen:
+Primär:
+- Funding Rounds (fast immer)
+
+Häufig kombiniert mit:
+- Spezifische Branchen-Topics je nach Startup:
+  - AI, Data & Automation
+  - DeepTech & Advanced Computing
+  - FinTech, GovTech & Regulation
+  - Health & Life Sciences
+  - Climate, Energy & Sustainability
+  - B2B & Enterprise
+  - etc.
+
+### Bei VC-Fund-News:
+Primär:
+- VC News (fast immer)
+
+Häufig kombiniert mit:
+- DeepTech & Advanced Computing (bei DeepTech-Funds)
+- AI, Data & Automation (bei AI-focused Funds)
+- Climate, Energy & Sustainability (bei Climate-Funds)
+- etc.
+
+## Ziel-Item-Anzahl
+
+**Minimum:** 3 Items  
+**Ziel:** 5-6 Items  
+**Maximum:** Unbegrenzt
+
+**Hinweis:** Deutsche Startup-Finanzierungen sind häufig, sollte also einfach sein, 5-6 Items zu finden.
+
+## Spezielle Hinweise
+
+### Bei Startup-Finanzierungen MUSS im summary enthalten sein:
+- **Branche/Business Model** des Startups
+- **Lead-Investor** (falls bekannt)
+- **Verwendungszweck** der Mittel (falls angegeben)
+- **Vorherige Runden** (falls relevant, z.B. "nach 2M Seed nun 8M Series A")
+
+### Beispiele für gute summaries:
+- ✅ "Das Münchner SaaS-Startup Acme erhält 5 Mio. EUR Seed von Cavalry Ventures. Das Kapital soll in Produktentwicklung und Teamaufbau fließen. Das Unternehmen bietet eine Collaboration-Software für Remote-Teams."
+- ✅ "Berliner HealthTech Medix sichert sich 8 Mio. EUR Series A unter Führung von Heartcore Capital. Nach 2 Mio. EUR Seed in 2024 will das Startup seine Telemedizin-Plattform europaweit ausrollen."
+- ❌ "Startup X erhält Funding." (SCHLECHT: Kein Betrag, kein Investor, keine Details)
+
+### Bei VC-Fund-News MUSS im summary enthalten sein:
+- **Fund-Größe**
+- **Investment-Fokus** (Branchen, Stages)
+- **LPs** (falls bekannt und relevant)
+- **Strategie/Besonderheit** des Funds
+
+### Beispiele für gute VC-Fund summaries:
+- ✅ "Der neue Micro-VC 'Rhine Ventures' startet mit 15 Mio. EUR Fund I. Fokus liegt auf Pre-Seed und Seed-Investments in B2B-SaaS-Startups in NRW. Zu den LPs zählen erfolgreiche Gründer und Family Offices."
+- ✅ "Earlybird schließt 350 Mio. EUR Fund VII für DeepTech und Climate-Investments in Europa. Der Fonds ist der bisher größte in der 25-jährigen Geschichte des VCs."
+
+### Investor-Namen:
+- Wenn mehrere Investoren: Lead + "und weitere" (außer alle sind sehr prominent)
+- Beispiel: "... von HV Capital, Cherry Ventures und Cavalry Ventures"
+
+### Währungen:
+- Wenn Original in USD: Im summary EUR-Äquivalent hinzufügen (falls relevant)
+- Beispiel: "20M USD (ca. 18M EUR)"
+
+### Runden-Bezeichnungen:
+- Nutze offizielle Bezeichnung aus Quelle
+- "Pre-Seed", "Seed", "Series A", etc.
+- Bei unklar: "Finanzierungsrunde" oder "Funding"
+
+## Funding-Limit nochmal in Klartext
+
+### ERLAUBT in funding-vc:
+- ✅ Alle Pre-Seed-Runden
+- ✅ Alle Seed-Runden bis 15M
+- ✅ Series A bis 15M
+- ✅ ALLE VC-Fund-Launches (auch 500M+ Funds!)
+
+### VERBOTEN in funding-vc:
+- ❌ Series A über 15M (außer mit Launch → dann launches-profiles)
+- ❌ Series B+
+- ❌ Growth Rounds
+- ❌ Late Stage
+- ❌ Jede Runde über 15M ohne Launch-Bezug
+
+### Warum diese Regel?
+- Fokus auf Early Stage (relevanter für VC-Fonds-Perspektive)
+- Späte Runden sind meist nur Financial Engineering, weniger operativ interessant
+- Erhält Qualität und Relevanz der News
+
+## Abgrenzung zu anderen Kategorien
+
+| Wenn es ist... | Dann gehört es zu... |
+|----------------|----------------------|
+| Startup-Funding ≤15M, kein Launch | funding-vc |
+| Startup-Funding >15M, kein Launch | SKIP (nicht aufnehmen) |
+| Startup-Funding (beliebig), MIT Launch | launches-profiles |
+| Neuer VC-Fund | funding-vc (alle Größen!) |
+| Institutionelles Förderprogramm | policy-institutions |
+| Aggregierte Funding-Statistik | market-insights |
+
+## Validierung vor Output
+
+Prüfe für jedes Item:
+
+### Bei Startup-Finanzierungen:
+- [ ] Hat "section": "funding-vc"
+- [ ] Runde ist ≤15 Mio. EUR
+- [ ] Es gibt KEINEN gleichzeitigen Launch im Fokus (sonst → launches-profiles)
+- [ ] Branche/Business Model ist im summary genannt
+- [ ] Lead-Investor ist genannt (falls bekannt)
+- [ ] "round" Feld ist korrekt: pre-seed, seed, series-a, (series-b nur wenn ≤15M)
+- [ ] "amount_eur" ist ausgefüllt
+- [ ] "investors" Array ist ausgefüllt
+- [ ] Hat mindestens 1 Topic aus der erlaubten Liste
+- [ ] "Funding Rounds" ist als Topic enthalten (empfohlen)
+
+### Bei VC-Fund-News:
+- [ ] Hat "section": "funding-vc"
+- [ ] Fund-Größe ist im summary genannt
+- [ ] Investment-Fokus ist beschrieben
+- [ ] "round" ist "na" (nicht anwendbar bei Funds)
+- [ ] "amount_eur" ist die Fund-Größe (bei Fund-Launches)
+- [ ] "companies" Array ist leer (außer VC-Name als "company")
+- [ ] Hat mindestens 1 Topic aus der erlaubten Liste
+- [ ] "VC News" ist als Topic enthalten (empfohlen)
 
