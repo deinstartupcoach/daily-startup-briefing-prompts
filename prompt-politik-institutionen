@@ -1,1 +1,103 @@
+# Kategorie-Prompt: Politik & Institutionen (policy-institutions)
+
+**Lies zuerst den Base-Prompt, dann wende diese kategorie-spezifischen Regeln an.**
+
+## Section-Wert
+```json
+"section": "policy-institutions"
+```
+
+## Definition
+
+Diese Kategorie erfasst alle News zu politischen Initiativen, Regulierungen und institutionellen Entwicklungen, die das deutsche Startup-Ökosystem betreffen.
+
+## Was gehört in diese Kategorie?
+
+✅ **Regierungs-Initiativen** (Bund, Länder, Städte)
+- Neue Startup-Förderprogramme
+- Ministerien-Ankündigungen für Startup-Unterstützung
+- Politische Strategien für Innovation/DeepTech/KI
+
+✅ **Regulierungen & Gesetzgebung**
+- Neue Gesetze mit Startup-Bezug
+- Regulierungsänderungen (z.B. Mitarbeiterbeteiligung, Steuerrecht)
+- Policy-Änderungen, die Startups betreffen
+
+✅ **Startup-Verbände & Industrie-Organisationen**
+- Bitkom, Startup-Verband, BAND, BDI etc.
+- Positionspapiere, Forderungen, Statements
+- Verbandsaktivitäten mit Policy-Bezug
+
+✅ **Institutionelle Programme**
+- KfW-Programme
+- InvestEU, EXIST, High-Tech Gründerfonds (institutionelle Aspekte)
+- Accelerator-Programme von Behörden
+
+## Beispiele - Was REIN gehört
+
+✅ "BMWK startet 500 Mio. EUR DeepTech-Initiative"  
+✅ "Berlin verdoppelt Startup-Förderung auf 50 Mio. EUR"  
+✅ "Bitkom fordert Vereinfachung bei Mitarbeiterbeteiligungen"  
+✅ "Neue KI-Regulierung betrifft deutsche AI-Startups"  
+✅ "Bayern kündigt Quantum-Computing-Förderprogramm an"  
+✅ "Startup-Verband kritisiert geplante Steuerreform"  
+✅ "EU-Parlament verabschiedet neue Scale-up-Richtlinie"
+
+## Beispiele - Was NICHT rein gehört
+
+❌ "VC-Fonds XY investiert in Politik-Tech" → funding-vc  
+❌ "Studie zeigt: 40% mehr Gründungen in Berlin" → market-insights  
+❌ "GovTech-Startup launcht Behörden-Plattform" → launches-profiles  
+❌ "Politikerin wechselt zu Startup" → People-Story (generell verboten)
+
+## Entscheidungsbaum für Grenzfälle
+
+**Frage 1:** Kommt die News von einer Regierung/Behörde/Verband?
+- Ja → Weiter zu Frage 2
+- Nein → Andere Kategorie
+
+**Frage 2:** Hat es direkten Policy/Regulierungs-Charakter?
+- Ja → **policy-institutions**
+- Nein, es ist nur eine Studie → market-insights
+- Nein, es ist eine Förderung für ein spezifisches Startup → funding-vc (falls ≤15M) oder launches-profiles (bei Launch)
+
+**Beispiel-Grenzfälle:**
+- "KfW-Studie zeigt VC-Trends" → market-insights (Studie, nicht Policy)
+- "KfW startet neues Startup-Kreditprogramm" → policy-institutions (Policy-Initiative)
+- "HTGF investiert 2M in Startup X" → funding-vc (konkretes Investment, nicht Policy)
+
+## Typische Topics für diese Kategorie
+
+Primär:
+- Startup Politics
+
+Häufig kombiniert mit:
+- DeepTech & Advanced Computing (bei DeepTech-Initiativen)
+- FinTech, GovTech & Regulation (bei GovTech/Regulierung)
+- Climate, Energy & Sustainability (bei Klima-Politik)
+- AI, Data & Automation (bei KI-Regulierung)
+
+## Ziel-Item-Anzahl
+
+**Minimum:** 3 Items  
+**Ziel:** 3-5 Items  
+**Maximum:** Unbegrenzt (falls viele relevante News vorhanden)
+
+## Spezielle Hinweise
+
+- Bei Förderankündigungen: Betrag und Laufzeit erwähnen
+- Bei Regulierungen: Konkrete Auswirkungen auf Startups nennen
+- Bei Verbands-Statements: Kernforderung zusammenfassen
+- Wenn ein Bundesland/Stadt etwas ankündigt: Im title oder summary erwähnen
+
+## Validierung vor Output
+
+Prüfe für jedes Item:
+- [ ] Hat "section": "policy-institutions"
+- [ ] Kommt von Regierung/Behörde/Verband ODER ist Regulierung
+- [ ] Ist KEINE reine Studie (→ market-insights)
+- [ ] Ist KEIN konkretes Investment (→ funding-vc)
+- [ ] Ist KEIN Startup-Launch (→ launches-profiles)
+- [ ] Hat mindestens 1 Topic aus der erlaubten Liste
+- [ ] "Startup Politics" ist als Topic enthalten (empfohlen)
 
