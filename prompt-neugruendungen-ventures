@@ -1,1 +1,191 @@
+# Kategorie-Prompt: Neugründungen & Ventures (launches-profiles)
 
+**Lies zuerst den Base-Prompt, dann wende diese kategorie-spezifischen Regeln an.**
+
+## Section-Wert
+```json
+"section": "launches-profiles"
+```
+
+## Definition
+
+Diese Kategorie erfasst NEUE Startups und deren LAUNCHES: Product Launches, Market Entry, Stealth-Exits, relevante Launch-Ankündigungen und Unternehmens-Portraits von frischen Ventures.
+
+**KERNPRINZIP:** Der Fokus liegt auf dem PRODUKT/VENTURE und seiner Markteinführung, NICHT primär auf der Finanzierung.
+
+## Was gehört in diese Kategorie?
+
+✅ **Echte Startup-Launches**
+- Product Launch (z.B. "App geht live", "Plattform startet")
+- Market Entry (z.B. "Expansion nach Deutschland", "Launch in neuem Segment")
+- "goes live", "launches", "startet", "bringt auf den Markt"
+
+✅ **Stealth-Exits mit Launch-Ankündigung**
+- Startup verlässt Stealth-Mode
+- Mit konkretem Produkt/Service-Ankündigung
+
+✅ **Relevante Launch-Ankündigungen**
+- Konkrete Launch-Timeline (z.B. "Q1 2026")
+- Substanzielle Details zum Produkt/Service
+- NICHT: Vage "plant irgendwann"
+
+✅ **Unternehmens-Portraits von NEUEN Ventures**
+- Startups < 6 Monate alt
+- Mit Fokus auf das Geschäftsmodell/Produkt
+- Auch ohne formellen "Launch" (wenn das Venture neu ist)
+
+✅ **Launch + Funding kombiniert**
+- Wenn ein Startup launcht UND Funding announced
+- → Gehört hierher (Launch-Focus), NICHT zu funding-vc
+- Beispiel: "Berliner AI-Startup Cortex launcht mit 3M Seed"
+
+✅ **Pre-Launch mit substanziellen Details**
+- Konkrete Produktbeschreibung
+- Klare Timeline
+- Relevante Partnerships/Pilots
+
+✅ **Corporate Venture-Ankündigungen**
+- Wenn substanziell (z.B. "Bosch gründet 20 DeepTech-Ventures bis 2028")
+- Mit konkreten Details zum Venture/Spin-off
+
+## Beispiele - Was REIN gehört
+
+✅ "Berliner Quantum-Startup Qvantum launcht Cloud-Plattform"  
+✅ "Mental-Health-App Mindly aus Hamburg startet bundesweit"  
+✅ "Münchner FoodTech Farmify bringt KI-gestützte Vertical Farming"  
+✅ "Stuttgarter Fintech Zephyr kündigt Banking-API für Q1 2026 an"  
+✅ "Kölner AI-Startup Cortex launcht mit 3M Seed" (Launch + Funding!)  
+✅ "Bosch kündigt Gründung von 20 Deep-Tech-Ventures bis 2028 an" (relevante Corporate-Ankündigung)  
+✅ "SaaS-Startup Acme verlässt Stealth-Mode mit Collaboration-Tool"  
+✅ "Neu gegründetes CleanTech-Startup stellt CO2-Capture-Lösung vor"
+
+## Beispiele - Was NICHT rein gehört
+
+❌ "Startup X erhält 5M Seed" (NUR Funding, kein Launch → funding-vc)  
+❌ "CEO plant irgendwann Startup zu gründen" (zu vage, keine Details)  
+❌ "Startup Y stellt neues Feature vor" (Feature-Update, kein Launch)  
+❌ "Scale-up Z expandiert nach Frankreich" (keine Launch-News, nur Expansion eines etablierten Unternehmens)  
+❌ "Interview mit Gründerin über ihren Werdegang" (People-Story, generell verboten)  
+❌ "Startup ABC feiert 5-jähriges Jubiläum" (kein Launch, nur Meilenstein)
+
+## Entscheidungsbaum für Grenzfälle
+
+**Frage 1:** Ist es ein Launch (Product, Market, Stealth-Exit)?
+- Ja → Weiter zu Frage 2
+- Nein → Weiter zu Frage 3
+
+**Frage 2:** Hat das Startup auch Funding announced?
+- Ja, und Launch steht im Fokus → **launches-profiles**
+- Nein, kein Funding → **launches-profiles**
+- Ja, aber NUR Funding ohne Launch-Details → funding-vc (aber unwahrscheinlich, da Frage 1 mit Ja beantwortet)
+
+**Frage 3:** Ist es ein ganz neues Venture (< 6 Monate)?
+- Ja, mit Geschäftsmodell-Beschreibung → **launches-profiles**
+- Nein → Andere Kategorie oder gar nicht
+
+**Frage 4:** Ist es eine konkrete Launch-Ankündigung?
+- Ja, mit Timeline + Details → **launches-profiles**
+- Nein, nur vage Pläne → Nicht aufnehmen
+
+**Beispiel-Grenzfälle:**
+
+| Szenario | Kategorie | Begründung |
+|----------|-----------|------------|
+| "Startup X launcht Produkt, hat vor 3 Monaten 10M geholt" | launches-profiles | Launch im Fokus |
+| "Startup Y holt 20M für Produktentwicklung, Launch für Q2 geplant" | launches-profiles (wenn >15M) ODER funding-vc (wenn ≤15M) | Wenn Launch substanziell beschrieben: launches-profiles. Wenn nur Funding-News: funding-vc (falls ≤15M) |
+| "Startup Z gibt Series B bekannt, keine Launch-News" | funding-vc (wenn ≤15M) oder gar nicht (wenn >15M) | Kein Launch-Bezug |
+| "Corporate verkündet vage 'mehr Ventures in Zukunft'" | Gar nicht | Zu vage |
+| "Corporate stellt neues Spin-off mit Produkt X vor" | launches-profiles | Konkretes neues Venture |
+
+## Spezielle Quellen für diese Kategorie
+
+**PRIORITÄT:** Nutze diese Launch-fokussierten Quellen besonders intensiv!
+
+- https://www.deutsche-startups.de/tag/brandneu/
+- https://startup-radar.de/
+
+Diese Quellen sind spezialisiert auf neue Ventures und Launches.
+
+## Typische Topics für diese Kategorie
+
+Primär:
+- New Startups (fast immer bei echten Launches/neuen Ventures)
+
+Häufig kombiniert mit:
+- Funding Rounds (wenn Launch + Funding)
+- Spezifische Branchen-Topics je nach Startup:
+  - AI, Data & Automation
+  - DeepTech & Advanced Computing
+  - Health & Life Sciences
+  - FinTech, GovTech & Regulation
+  - Climate, Energy & Sustainability
+  - Retail, Commerce & Consumer
+  - B2B & Enterprise
+  - etc.
+
+## Ziel-Item-Anzahl
+
+**Minimum:** 3 Items  
+**Ziel:** 5-6 Items  
+**Maximum:** Unbegrenzt
+
+**WICHTIG:** Diese Kategorie hat PRIORITÄT! Nutze die Launch-fokussierten Quellen intensiv.
+
+## Spezielle Hinweise
+
+### MUSS im summary enthalten sein:
+- **Business Model / Branche** des Startups
+- Kernprodukt/Service (was macht das Startup?)
+- Bei Launch: Was genau wird gelauncht?
+
+### Beispiele für gute summaries:
+- ✅ "Das Berliner HealthTech-Startup Medix launcht eine Telemedizin-Plattform für Hausärzte. Die App ermöglicht Videokonsultationen und digitale Rezepte."
+- ✅ "Münchner FoodTech Farmify bringt KI-gestützte Vertical-Farming-Lösung für Supermärkte auf den Markt. Das System optimiert Ernte-Zyklen und reduziert Wasserverbrauch um 90%."
+- ❌ "Startup X launcht neue Lösung." (SCHLECHT: Kein Business Model, keine Details)
+
+### Bei Launch + Funding:
+- Funding erwähnen, aber Launch im Fokus
+- Beispiel: "Das Kölner AI-Startup Cortex launcht seine NLP-Plattform und sichert sich gleichzeitig 3 Mio. EUR Seed-Funding von..."
+
+### Bei Stealth-Exits:
+- Erwähnen, dass Stealth-Mode verlassen wird
+- Was war das Startup bisher geheim entwickelt?
+
+### Bei Launch-Ankündigungen:
+- Konkrete Timeline nennen (Q1 2026, März 2026, etc.)
+- Was wird genau kommen?
+- Sind Beta/Pilots geplant?
+
+### Bei neuen Ventures ohne formellen Launch:
+- Wann gegründet (falls bekannt)?
+- Warum ist es relevant/interessant?
+- Gibt es schon erste Kunden/Pilots?
+
+## Abgrenzung zu funding-vc
+
+**launches-profiles:**
+- Startup ist NEU (< 6 Monate) ODER
+- Es gibt einen konkreten Product/Market Launch ODER
+- Launch-Ankündigung mit Details
+
+**funding-vc:**
+- Startup existiert schon länger
+- Nur Finanzierungsrunde announced (≤15M EUR)
+- Kein Launch-Bezug
+
+**Bei Kombination (Launch + Funding):**
+→ Immer **launches-profiles** (Launch hat Vorrang)
+
+## Validierung vor Output
+
+Prüfe für jedes Item:
+- [ ] Hat "section": "launches-profiles"
+- [ ] Ist entweder:
+  - [ ] Ein Product/Market Launch ODER
+  - [ ] Ein neues Venture (< 6 Monate) ODER
+  - [ ] Eine konkrete Launch-Ankündigung mit Timeline
+- [ ] Business Model / Branche ist im summary genannt
+- [ ] Ist KEINE reine Funding-News ohne Launch
+- [ ] Ist KEIN Feature-Update eines etablierten Startups
+- [ ] Hat mindestens 1 Topic aus der erlaubten Liste
+- [ ] "New Startups" ist als Topic enthalten (empfohlen bei echten Launches)
